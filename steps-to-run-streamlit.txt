@@ -14,7 +14,7 @@ C:\Users\Sumit\miniconda3\envs\chem-ml-clean\python.exe
 
 python -c "from rdkit import Chem; mol = Chem.MolFromSmiles('CCO'); print(mol)"
 
-✅ Expected output:
+Expected output:
 
 <rdkit.Chem.rdchem.Mol object at 0x...>
 
