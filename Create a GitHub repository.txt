@@ -1,0 +1,101 @@
+Step 1: Create a GitHub repository
+
+Go to GitHub
+ and log in.
+
+Click New repository.
+
+Give it a name, e.g., solubility-predictor.
+
+Optionally, add a description.
+
+Leave it as Public or Private depending on your choice.
+
+Do not initialize with a README (we’ll do it locally).
+
+Click Create repository.
+
+Step 2: Initialize git locally
+
+In your project folder (E:\deepchem\solubility):
+
+cd E:\deepchem\solubility
+git init
+
+
+This creates a local Git repository.
+
+Step 3: Add your files
+
+Add all files you want to upload (e.g., app.py, solubility_rf_model.pkl, any requirements file):
+
+git add .
+
+
+Check what will be added:
+
+git status
+
+Step 4: Commit changes
+git commit -m "Initial commit: Streamlit solubility predictor"
+
+Step 5: Add remote repository
+
+Replace <username> and <repo> with your GitHub username and repository name:
+
+git remote add origin https://github.com/<username>/solubility-predictor.git
+
+Step 6: Push to GitHub
+git branch -M main
+git push -u origin main
+
+
+Now, your files should appear on GitHub.
+
+Step 7: Optional – Add a .gitignore
+
+Create a .gitignore to avoid uploading unnecessary files (like your environment, .venv, or large models):
+
+Create .gitignore in your project folder:
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Conda environment
+env/
+.venv/
+*.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Streamlit
+.streamlit/
+
+# Models
+*.pkl
+
+
+Then git add .gitignore, commit, and push again.
+
+
+
+Step 8: Optional – Add requirements
+
+Create requirements.txt so others can run your app:
+
+pip freeze > requirements.txt
+
+
+
+Option 2: Remove the existing origin and add again
+git remote remove origin
+git remote add origin https://github.com/Sam1993145/solubility-predictor.git
+
+Then you can push:
+
+git branch -M main
+git push -u origin main
