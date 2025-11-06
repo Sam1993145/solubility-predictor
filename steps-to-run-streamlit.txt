@@ -1,0 +1,23 @@
+conda create -n chem-ml-clean -c conda-forge python=3.11 rdkit streamlit matplotlib seaborn scikit-learn joblib -y
+
+
+conda activate chem-ml-clean
+
+
+python --version
+python -c "import sys; print(sys.executable)"
+
+It should point to:
+
+C:\Users\Sumit\miniconda3\envs\chem-ml-clean\python.exe
+
+
+python -c "from rdkit import Chem; mol = Chem.MolFromSmiles('CCO'); print(mol)"
+
+✅ Expected output:
+
+<rdkit.Chem.rdchem.Mol object at 0x...>
+
+
+
+python -m streamlit run app.py
